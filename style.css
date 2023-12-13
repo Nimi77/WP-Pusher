@@ -6,7 +6,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Inter', san-serif;
+  font-family: 'Lato', sans-serif;
 }
 :root{
    
@@ -114,9 +114,18 @@ button{
     display: flex;
     justify-content: space-between;
 }
+.navigation-bar .logo{
+    display: flex;
+    align-items: center;
+}
+.navigation-bar .logo img{
+    width: 200px;
+    height: 39px;
+    flex-shrink: 0;
+}
 .navigation-bar ul li{
     display:inline-flex;
-    padding-block: 12px;
+    padding-block: 11px;
     color: #1D2C3C;
     text-align: center;
     font-family: Lato;
@@ -139,12 +148,12 @@ button{
     border-radius: 6px;
     border: 2px solid #646E7A;
 }
-
+/* styling for the 
+website main content */
 .main-content{
     max-width:892px;
-    margin-block:80px;
+    margin-block:85px;
     margin-inline: auto;
-    align-content: center;
 }
 .main-content .content-container{
     display: grid;
@@ -154,10 +163,10 @@ button{
     box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05), 0px 15px 35px 0px rgba(43, 64, 78, 0.10);
 }
 .content-container .user-form{
-    padding-inline: 48px;
     padding-block: 41px;
 }
 .user-form .heading{
+    padding-inline: 48px;
     padding-bottom: 24px;
     border-bottom: 2px solid #F5F7FA;
 }
@@ -170,29 +179,183 @@ button{
     line-height: normal;
 }
 .user-form .user-details{
-    margin-block-start: 36px;
+    margin: 36px 0 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
-.info .info-heading span{
-    padding:6px 15px;
-    border-radius: 50px;
+.user-details .info,
+.user-details .payment{
+    border-bottom: 2px solid #F5F7FA;
+}
+.detail-heading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-inline: 48px;
+    gap:12px;
+}
+.detail-heading span{
+    width: 30px;
+    height:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 55px;
+    color: #548BC5;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.142px;
     border:2px solid #548BC5;
 }
-
+.detail-heading h4{
+    color: #1D2C3C;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.16px;
+}
+.info .user-input-form{
+    margin-top: 12px;
+    margin-bottom: 36px;
+    padding-inline: 48px;
+}
+.user-input-form .name{
+    display: flex;
+    align-items: center;  
+    gap:22px;
+}
+.name 
+.nameOne, .nameTwo{
+    display: flex;
+    flex-direction: column;
+}
+.name input{
+    width: max(229px, 180px)
+}
+.user-input-form label{
+    color: #1D2C3C;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 7px;
+}
+.user-input-form input{
+    padding: 9px 13px;
+    color: #646E7A;
+    border-radius: 4px;
+    outline: none;
+    border: 0px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    background: #EDEFF2;
+    transition: all 0.2s ease-out;
+}
+.user-input-form input:is(:hover, :focus){
+    border:2px solid #1D2C3C;
+}
+.user-input-form .emailAddress{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+.emailAddress .email{
+    max-width: 370px;
+}
+/* styling for the payment 
+details */
+.user-details .payment{
+    margin-top: 36px;
+}
+.payment .user-input-form{
+    margin-top: 12px;
+    margin-bottom: 36px;
+    padding-inline: 48px;
+}
+.payment .user-input-form{
+    display: flex;
+    flex-direction: column;
+}
+.user-input-form .cardNo:after{
+    content: "MM / YY";
+    color: #646E7A;
+    text-align: right;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+/* styling for the action
+button */
+.user-form button{
+    margin-left: 48px;
+    width: 483px;
+    height: 52px;
+    flex-shrink: 0;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.396px;
+    color: #FFF;
+    border-radius: 5px;
+    background: #038E7D;
+}
+.user-form footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+}
+footer .contact-support{
+    display: inline-flex;
+    justify-content: center;
+}
+.contact-support p{
+    color: #1D2C3C;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.01px;  
+    width:280px;
+    padding-left: 6px;
+}
+.contact-support p span{
+    color: #646E7A;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.01px;
+}
+.contact-support p .contact-link{
+    text-decoration: underline;
+}
+footer .maker svg{
+    margin-top: 34px;
+}
+/* styling for the right side 
+container */
 .content-container .plan-details{
     width: 312px;
-    padding: 42px 46px;
-    flex-shrink: 0;
+    padding: 41px 46px;
     border-radius: 0px 6px 6px 0px;
     background: #1179BF;
     color: #FFF;
 }
-.plan-details > .plan{
+.plan-details .plan{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap:10px;
-    align-items: left;
 }
 .plan h4{
     font-size: 20px;
@@ -201,60 +364,58 @@ button{
     line-height: normal;
     letter-spacing: -0.01px;
 }
-.plan .pricing{
-    display:flex;
-    gap:6px;
-}
-.plan .pricing span{
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: -0.015px;
-}
-.pricing p.duration{
+.plan  p.price{
     font-size: 60px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
     letter-spacing: -0.015px;
 }
-.pricing .duration span{
+.plan p.price sup{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.015px;
+}
+.plan  p.price span{
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     letter-spacing: -0.015px;
 }
-.plan-details .plan p.renewal{
+.plan p.renewal{
     font-size: 16px;
     font-style: italic;
     font-weight: 400;
     line-height: 24px; 
     letter-spacing: -0.008px;
-    max-width: 229px;
+    max-width: 162px;
 }
-.plan-details .features{
+.plan-details .plan-benefits{
     margin-block: 36px;
 }
-.features ul li{
+.plan-benefits #benefit-list > li{
+    display: flex;
+    align-items: center;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: -0.008px;
 }
-.features ul li:not(:last-child){
+#benefit-list > li:not(:last-child){
     padding-block-end: 8px;
 }
-.features ul li span{
-   margin-inline-start: 11px;
+#benefit-list > li svg{
+   margin-inline-end: 11px;
+}
+#benefit-list > li span{
+    margin-inline: 4px;
+    font-weight: 700;
 }
 .plan-details .help{
     padding-block-end: 41px;
-}
-.plan-details hr{
-    border: 2px solid #979797;
-    height:2px;
 }
 .plan-details .help p{
     font-size: 16px;
@@ -267,8 +428,10 @@ button{
     font-style: normal;
     font-weight: 700;
 }
+.plan-details .help a{
+    text-decoration:underline;
+}
 .plan-details .help a span{
-    color: #FFF;
     font-size: 16px;
     font-style: italic;
     font-weight: 700;
@@ -276,10 +439,10 @@ button{
     letter-spacing: -0.008px;
 }
 .plan-details .testimony{
-    margin: 43px 2px 0 0;
+   padding-block-start: 43px;
+   border-top: 2px solid #ffffff31;
 }
 .testimony p{
-    width: 227px;
     color: #FFF;
     font-family: Lato;
     font-size: 18px;
@@ -296,15 +459,107 @@ button{
 .testimony .profile{
     margin-top: 17px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap:4px;
+    gap:14px;
 }
-.profile{
-    color: #FFF;
+.profile img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.profile span{
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     letter-spacing: -0.008px;
 }
+.main-content .copyright{
+    color: #636B6F;
+    margin-top: 33px;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.copyright span{
+    color: #31708F;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+@media screen and (max-width:920px) {
+    .main-content {
+        margin-inline: 20px;
+    }
+    .main-content .content-container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .content-container .plan-details{
+        width:40%;
+        padding: 41px 25px;
+    }
+    .user-form .heading,
+    .detail-heading,
+    .info .user-input-form,
+    .payment .user-input-form{
+        padding-inline: 25px;
+    }
+    .user-form button{
+        margin-left:30px ;
+    }
+}
+@media screen and (max-width:794px) {
+    .top{
+        padding-inline: 20px;
+    }
+    .navigation-bar .logo img{
+        width:160px;
+        height:36px;
+    }
+    .content-container .user-form{
+        max-width:400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .name input{
+        width:170px;
+    }
+    .user-form button{
+        width:345px;
+    }
+}
+@media screen and (max-width:680px) {
+    .navigation-bar .logo img{
+        width:141px;
+        height:28px;
+    }
+    .main-content{
+        margin-block: 60px;
+    }
+    .user-form .heading h2{
+        font-size: 28px;
+    }
+    .name input{
+        width:160px;
+    }
+    .plan p.price{
+        font-size: 50px;
+    }
+}
+@media screen and (max-width:666px) {
+  
+    h4{
+        font-size: 16px;
+    }
+    .plan p.price{
+        font-size: 40px!important;
+    }
+}
+
+
+
