@@ -15,7 +15,7 @@
             <div class="logo">
                 <img src="Image/wppusher-logo copy.png" alt="wp-logo">
             </div>
-            <ul id="nav-list">
+            <ul id="nav-link">
                 <li><a href="#">Download</a></li>
                 <li><a href="#">Learn More</a></li>
                 <li><a href="#">Pricing</a></li>
@@ -36,20 +36,20 @@
                             <span>1</span>
                             <h4>Your Basic Information</h4>
                         </div>
-                        <form action="" class="user-input-form">
+                        <form action=""  class="user-input-form" id="detailsForm">
                             <div class="name">
                                 <div class="nameOne">
-                                    <label for="name">First Name</label>
-                                    <input type="text" class="firstName" placeholder="Jane" required>
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" class="firstName" id="firstName" placeholder="Jane" required>
                                 </div>
                                 <div class="nameTwo">
-                                    <label for="name">Last Name</label>
-                                    <input type="text" class="lastName" placeholder="Doe" required>
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" class="lastName" id="lastName" placeholder="Doe" required>
                                 </div>
                             </div>
                             <div class="emailAddress">
                                 <label for="email">Email</label>
-                                <input type="email" class="email" placeholder="janedoe@example.com" required>
+                                <input type="email" class="email" id="email" placeholder="janedoe@example.com" autocomplete="on" equired>
                             </div>
                         </form>
                     </div>
@@ -58,12 +58,12 @@
                             <span>2</span>
                             <h4>Your Payment Information</h4>
                         </div>
-                        <form class="user-input-form">
-                            <label for="name">Credit Card</label>
+                        <form class="user-input-form" id="payementForm">
+                            <label for="cardNo">Credit Card</label>
                             <div class="card-input" tabindex="0">
-                                <input type="number" class="cardNo" placeholder="Card Number" required>
-                                <input type="number" class="cardNo" placeholder="MM / YY" required>
-                                <input type="number" class="cardNo" placeholder="CVC" required>
+                                <input type="number" class="cardNo" id="cardNo" placeholder="Card Number" required>
+                                <input type="number" class="cardNo" id="monthYear" placeholder="MM / YY" required>
+                                <input type="number" class="cardNo" id="cvcNo" placeholder="CVC" required>
                             </div>
                         </form>
                     </div>

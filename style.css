@@ -132,7 +132,7 @@ button {
   width: 200px;
   height: 39px;
 }
-.navigation-bar ul#nav-list{
+.navigation-bar ul#nav-link{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
