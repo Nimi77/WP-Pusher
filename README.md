@@ -1,6 +1,5 @@
-
 ## WP Pusher
-A web form which contains the basic information of users and their card payment to purchase the site with different features attach to the plan spcified by the browser/user
+A web form or page that contains the basic information of users and their card payment details to purchase the WP Pusher site which has different features attached to the plan specified by the browser or user.
 
 
 ## Demo
